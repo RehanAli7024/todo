@@ -12,10 +12,7 @@
         "config": { "distDir": "client/build" }
       }
     ],
-    "routes": [
-      { "src": "/api/(.*)", "dest": "/app.js" },
-      { "src": "/(.*)", "dest": "/client/$1" }
-    ],
+    
     "rewrites": [{ 
         "source": "/api/(.*)", 
         "destination": "/api" 
