@@ -1,21 +1,14 @@
 {
-    "version": 2,
-    "name": "todo-list-app",
     "builds": [
       {
-        "src": "app.js",
+        "src": "./app.js",
         "use": "@vercel/node"
-      },
-      {
-        "src": "client/package.json",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "client/build" }
       }
     ],
-    
-    "rewrites": [{ 
-        "source": "/api/(.*)", 
-        "destination": "/api" 
-    }]
+    "routes": [
+      {
+        "src": "/.*",
+        "dest": "app.js"
+      }
+    ]
   }
-  
