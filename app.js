@@ -22,7 +22,7 @@ app.use("/api/v2", list);
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 // Catch-all handler to serve the React app for any request that doesn't match the above routes
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
 
